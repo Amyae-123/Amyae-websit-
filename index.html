@@ -3,215 +3,370 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AMYAE | Online Fashion Store</title>
+
+<title>AMYAE | Modesty & Prayer Wear</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;color:#222;background:#fff}
-a{text-decoration:none;color:inherit}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fff;
+  color:#222;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
 
 .top{
-background:#111;color:#fff;text-align:center;padding:9px;
-font-size:12px;letter-spacing:1px
+  background:#182015;
+  color:#fff;
+  text-align:center;
+  padding:10px;
+  font-size:12px;
+  letter-spacing:1px;
 }
 
 header{
-border-bottom:1px solid #ddd;background:#fff;
-position:sticky;top:0;z-index:10
+  background:#fff;
+  border-bottom:1px solid #ddd;
+  position:sticky;
+  top:0;
+  z-index:20;
 }
 
 .nav{
-max-width:1250px;margin:auto;height:72px;
-display:flex;align-items:center;justify-content:space-between;
-padding:0 22px
+  max-width:1200px;
+  margin:auto;
+  height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 25px;
 }
 
 .logo{
-font-size:28px;font-weight:700;letter-spacing:4px
+  font-family:Georgia,serif;
+  font-size:30px;
+  letter-spacing:4px;
 }
 
 .links{
-display:flex;gap:27px;font-size:13px;text-transform:uppercase
+  display:flex;
+  gap:30px;
+  font-size:13px;
+  text-transform:uppercase;
 }
 
 .icons{
-display:flex;gap:18px;font-size:21px
+  font-size:22px;
 }
 
 .hero{
-height:72vh;min-height:520px;
-background:
-linear-gradient(90deg,rgba(0,0,0,.52),rgba(0,0,0,.08)),
-url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85')
-center/cover;
-display:flex;align-items:center
+  min-height:560px;
+  display:flex;
+  align-items:center;
+  background:
+  linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,.1)),
+  url("images/prayer1.jpg") center/cover;
 }
 
 .heroText{
-max-width:1250px;width:100%;margin:auto;
-padding:30px;color:white
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+  padding:40px;
+  color:white;
 }
 
 .heroText p{
-font-size:14px;letter-spacing:4px;margin-bottom:18px
+  letter-spacing:4px;
+  font-size:13px;
+  margin-bottom:15px;
 }
 
 .heroText h1{
-font-size:58px;line-height:1.05;
-max-width:650px;margin-bottom:25px
+  font-family:Georgia,serif;
+  font-size:55px;
+  max-width:650px;
+  line-height:1.1;
+  margin-bottom:25px;
 }
 
 .btn{
-display:inline-block;background:#fff;color:#111;
-padding:15px 30px;font-size:13px;
-font-weight:bold;letter-spacing:1px
+  display:inline-block;
+  background:white;
+  color:#222;
+  padding:15px 30px;
+  font-size:13px;
+  font-weight:bold;
+  letter-spacing:1px;
+  border:none;
+  cursor:pointer;
 }
 
 .section{
-max-width:1250px;margin:65px auto;padding:0 22px
+  max-width:1200px;
+  margin:70px auto;
+  padding:0 25px;
 }
 
 .title{
-text-align:center;margin-bottom:35px
+  text-align:center;
+  margin-bottom:40px;
 }
 
 .title h2{
-font-size:30px;margin-bottom:9px
+  font-family:Georgia,serif;
+  font-size:34px;
+  margin-bottom:10px;
 }
 
 .title p{
-color:#777;font-size:14px
+  color:#777;
 }
 
+/* PRODUCTS */
+
 .products{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:22px
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
 }
 
 .card{
-background:#f6f6f6;
-position:relative
+  background:#f7f5f0;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
 }
 
 .card img{
-width:100%;
-height:390px;
-object-fit:cover;
-display:block
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  display:block;
 }
 
 .cardInfo{
-background:white;
-padding:15px 4px
+  padding:18px;
+  background:white;
 }
 
 .cardInfo h3{
-font-size:14px;
-font-weight:500;
-margin-bottom:7px
+  font-size:15px;
+  margin-bottom:8px;
 }
 
 .price{
-font-size:14px;
-font-weight:bold
+  font-weight:bold;
 }
 
-.badge{
-position:absolute;
-top:12px;
-left:12px;
-background:white;
-padding:7px 10px;
-font-size:10px;
-z-index:2
+/* PRODUCT POPUP */
+
+.modal{
+  display:none;
+  position:fixed;
+  z-index:100;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.75);
+  overflow:auto;
+}
+
+.modalBox{
+  background:white;
+  max-width:1100px;
+  margin:50px auto;
+  padding:25px;
+  position:relative;
+}
+
+.close{
+  position:absolute;
+  right:20px;
+  top:12px;
+  font-size:35px;
+  cursor:pointer;
+}
+
+.productDetail{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:40px;
+  margin-top:25px;
+}
+
+.mainImage{
+  width:100%;
+  height:600px;
+  object-fit:cover;
+}
+
+.thumbs{
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+}
+
+.thumbs img{
+  width:85px;
+  height:100px;
+  object-fit:cover;
+  cursor:pointer;
+  border:2px solid transparent;
+}
+
+.thumbs img:hover{
+  border-color:#182015;
+}
+
+.detailInfo{
+  padding:30px 10px;
+}
+
+.detailInfo h2{
+  font-family:Georgia,serif;
+  font-size:34px;
+  margin-bottom:15px;
+}
+
+.detailPrice{
+  font-size:22px;
+  font-weight:bold;
+  margin:20px 0;
 }
 
 .description{
-font-size:13px;
-color:#777;
-line-height:1.5;
-margin-top:8px
+  color:#666;
+  line-height:1.8;
+  margin-bottom:25px;
 }
+
+.features{
+  margin:20px 0;
+  line-height:2;
+}
+
+.add{
+  background:#182015;
+  color:white;
+  width:100%;
+  padding:17px;
+  border:none;
+  font-weight:bold;
+  cursor:pointer;
+  font-size:14px;
+}
+
+/* BANNER */
 
 .banner{
-background:#eee;
-display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center
+  background:#f3eee6;
+  padding:60px;
+  text-align:center;
 }
 
-.banner img{
-width:100%;
-height:470px;
-object-fit:cover
+.banner h2{
+  font-family:Georgia,serif;
+  font-size:40px;
+  margin-bottom:15px;
 }
 
-.bannerText{
-padding:50px
+.banner p{
+  color:#666;
+  margin-bottom:25px;
 }
 
-.bannerText p{
-letter-spacing:3px;
-font-size:12px;
-margin-bottom:15px
-}
-
-.bannerText h2{
-font-size:42px;
-margin-bottom:20px
-}
-
-.dark{
-background:#161616;
-color:#fff;
-text-align:center;
-padding:70px 20px
-}
-
-.dark h2{
-font-size:34px;
-margin-bottom:12px
-}
-
-.dark p{
-color:#ccc;
-margin-bottom:25px
-}
+/* FOOTER */
 
 footer{
-background:#f5f5f5;
-padding:45px 22px
+  background:#182015;
+  color:white;
+  padding:50px 25px;
 }
 
 .footerGrid{
-max-width:1250px;
-margin:auto;
-display:grid;
-grid-template-columns:2fr 1fr 1fr 1fr;
-gap:35px
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:35px;
 }
 
 footer h3{
-font-size:13px;
-margin-bottom:17px
+  margin-bottom:15px;
 }
 
-footer p,footer a{
-display:block;
-color:#666;
-font-size:13px;
-margin:9px 0
+footer p,
+footer a{
+  display:block;
+  color:#ccc;
+  margin:9px 0;
+  font-size:14px;
 }
+
+/* MOBILE */
 
 @media(max-width:800px){
-.links{display:none}
-.products{grid-template-columns:repeat(2,1fr)}
-.card img{height:300px}
-.heroText h1{font-size:40px}
-.banner{grid-template-columns:1fr}
-.banner img{height:350px}
-.footerGrid{grid-template-columns:1fr 1fr}
+
+  .links{
+    display:none;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .card img{
+    height:300px;
+  }
+
+  .heroText h1{
+    font-size:40px;
+  }
+
+  .productDetail{
+    grid-template-columns:1fr;
+  }
+
+  .mainImage{
+    height:500px;
+  }
+
+  .footerGrid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:500px){
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    min-height:500px;
+  }
+
+  .modalBox{
+    margin:10px;
+  }
+
+  .mainImage{
+    height:400px;
+  }
 }
 </style>
 </head>
@@ -225,34 +380,35 @@ FREE DELIVERY ON ORDERS OVER AED 250
 <header>
 <nav class="nav">
 
-<div class="logo">AMYAE</div>
+<div class="logo">
+AMYAE
+</div>
 
 <div class="links">
 <a href="#shop">New In</a>
+<a href="#shop">Prayer Wear</a>
 <a href="#shop">Women</a>
-<a href="#shop">Men</a>
 <a href="#shop">Collections</a>
-<a href="#shop">Sale</a>
 </div>
 
 <div class="icons">
-<span>⌕</span>
-<span>♡</span>
-<span>🛍</span>
+♡ 🛍
 </div>
 
 </nav>
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="heroText">
 
-<p>NEW SEASON 2026</p>
+<p>AMYAE MODEST COLLECTION</p>
 
 <h1>
-Style made for every moment.
+Modesty in every prayer.
 </h1>
 
 <a class="btn" href="#shop">
@@ -264,29 +420,31 @@ SHOP NOW
 </section>
 
 
+<!-- PRODUCTS -->
+
 <section class="section" id="shop">
 
 <div class="title">
-<h2>Shop New Arrivals</h2>
-<p>Discover the latest AMYAE collection</p>
+
+<h2>
+Featured Collection
+</h2>
+
+<p>
+Premium modest wear designed for comfort and elegance.
+</p>
+
 </div>
 
 
 <div class="products">
 
 
-<!-- YOUR AMYAE PRODUCT -->
+<!-- PRODUCT -->
 
-<div class="card">
+<div class="card" onclick="openProduct()">
 
-<span class="badge">
-NEW
-</span>
-
-<img
-src="Off%20White%20Prayer%20Dress"
-alt="AMYAE Premium Cotton Prayer Dress"
->
+<img src="images/prayer1.jpg" alt="AMYAE Prayer Dress">
 
 <div class="cardInfo">
 
@@ -295,35 +453,30 @@ Premium Cotton Prayer Dress
 </h3>
 
 <div class="price">
-AED 99
+AED 149
 </div>
-
-<p class="description">
-Soft, breathable and comfortable one-piece Islamic prayer dress.
-Made for peaceful and comfortable prayers.
-</p>
 
 </div>
 
 </div>
 
 
-<!-- OTHER PRODUCTS -->
+<!-- MORE PRODUCT CARDS CAN BE ADDED HERE -->
 
 <div class="card">
 
-<span class="badge">
-NEW
-</span>
-
-<img
-src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80"
-alt="Elegant Summer Dress"
->
+<img src="images/prayer2.jpg" alt="AMYAE Prayer Dress">
 
 <div class="cardInfo">
-<h3>Elegant Summer Dress</h3>
-<div class="price">AED 189</div>
+
+<h3>
+AMYAE Modest Prayer Collection
+</h3>
+
+<div class="price">
+AED 149
+</div>
+
 </div>
 
 </div>
@@ -331,33 +484,18 @@ alt="Elegant Summer Dress"
 
 <div class="card">
 
-<span class="badge">
-NEW
-</span>
-
-<img
-src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=700&q=80"
-alt="Classic Linen Set"
->
+<img src="images/prayer3.jpg" alt="AMYAE Prayer Dress">
 
 <div class="cardInfo">
-<h3>Classic Linen Set</h3>
-<div class="price">AED 229</div>
+
+<h3>
+Elegant White Prayer Dress
+</h3>
+
+<div class="price">
+AED 149
 </div>
 
-</div>
-
-
-<div class="card">
-
-<img
-src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=700&q=80"
-alt="Everyday Statement Look"
->
-
-<div class="cardInfo">
-<h3>Everyday Statement Look</h3>
-<div class="price">AED 159</div>
 </div>
 
 </div>
@@ -368,25 +506,18 @@ alt="Everyday Statement Look"
 </section>
 
 
+<!-- COLLECTION BANNER -->
+
 <section class="section">
 
 <div class="banner">
 
-<img
-src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=85"
-alt="AMYAE Collection"
->
-
-<div class="bannerText">
-
-<p>THE NEW COLLECTION</p>
-
 <h2>
-Effortless. Modern. Yours.
+Made for your peaceful moments.
 </h2>
 
 <p>
-Discover versatile pieces designed for your everyday wardrobe.
+Soft. Breathable. Comfortable. Designed for your prayer.
 </p>
 
 <a class="btn" href="#shop">
@@ -395,65 +526,203 @@ EXPLORE COLLECTION
 
 </div>
 
+</section>
+
+
+<!-- PRODUCT DETAIL POPUP -->
+
+<div class="modal" id="productModal">
+
+<div class="modalBox">
+
+<span class="close" onclick="closeProduct()">
+×
+</span>
+
+
+<div class="productDetail">
+
+
+<div>
+
+<img
+id="mainProductImage"
+class="mainImage"
+src="images/prayer1.jpg"
+alt="Prayer Dress"
+>
+
+
+<div class="thumbs">
+
+<img
+src="images/prayer1.jpg"
+onclick="changeImage(this.src)"
+>
+
+<img
+src="images/prayer2.jpg"
+onclick="changeImage(this.src)"
+>
+
+<img
+src="images/prayer3.jpg"
+onclick="changeImage(this.src)"
+>
+
 </div>
 
-</section>
+</div>
 
 
-<section class="dark">
+<div class="detailInfo">
 
 <h2>
-AMYAE ONLINE STORE
+Premium Cotton Prayer Dress
 </h2>
 
-<p>
-Fashion, delivered across the UAE.
+<div class="detailPrice">
+AED 149
+</div>
+
+<p class="description">
+
+Experience comfort and elegance with the AMYAE Premium Cotton Prayer Dress.
+
+Made from soft, breathable cotton, this one-piece prayer dress provides comfortable full coverage while allowing you to move freely during prayer.
+
+Its lightweight fabric makes it comfortable for everyday use and easy to store or travel with.
+
 </p>
 
-<a class="btn" href="#shop">
-SHOP THE COLLECTION
-</a>
 
-</section>
+<div class="features">
 
+✓ 100% Cotton<br>
+✓ Soft & Breathable Fabric<br>
+✓ Lightweight & Comfortable<br>
+✓ Full Coverage<br>
+✓ One-Piece Design<br>
+✓ Suitable for Daily Prayer
+
+</div>
+
+
+<button class="add" onclick="addToCart()">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
 
 <footer>
 
 <div class="footerGrid">
 
 <div>
-<h3>AMYAE</h3>
+
+<h3>
+AMYAE
+</h3>
+
 <p>
-A modern online fashion store bringing timeless style to your wardrobe.
+Modesty in every prayer. Premium modest clothing designed for comfort and elegance.
 </p>
+
 </div>
 
+
 <div>
-<h3>SHOP</h3>
+
+<h3>
+SHOP
+</h3>
+
+<a href="#shop">Prayer Wear</a>
 <a href="#shop">Women</a>
-<a href="#shop">Men</a>
 <a href="#shop">New Arrivals</a>
-<a href="#shop">Sale</a>
+
 </div>
 
+
 <div>
-<h3>HELP</h3>
+
+<h3>
+HELP
+</h3>
+
 <a href="#">Contact Us</a>
 <a href="#">Shipping</a>
 <a href="#">Returns</a>
 <a href="#">FAQ</a>
+
 </div>
 
+
 <div>
-<h3>FOLLOW</h3>
+
+<h3>
+FOLLOW
+</h3>
+
 <a href="#">Instagram</a>
 <a href="#">Facebook</a>
 <a href="#">TikTok</a>
+
 </div>
 
 </div>
 
 </footer>
+
+
+<script>
+
+function openProduct(){
+
+document.getElementById("productModal").style.display="block";
+
+}
+
+function closeProduct(){
+
+document.getElementById("productModal").style.display="none";
+
+}
+
+function changeImage(image){
+
+document.getElementById("mainProductImage").src=image;
+
+}
+
+function addToCart(){
+
+alert("Product added to cart!");
+
+}
+
+window.onclick=function(event){
+
+let modal=document.getElementById("productModal");
+
+if(event.target==modal){
+
+modal.style.display="none";
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
