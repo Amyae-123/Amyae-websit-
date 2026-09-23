@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMYAE | Online Fashion Store</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#222;background:#fff}
+a{text-decoration:none;color:inherit}
+.top{background:#111;color:#fff;text-align:center;padding:9px;font-size:12px;letter-spacing:1px}
+header{border-bottom:1px solid #ddd;background:#fff;position:sticky;top:0;z-index:10}
+.nav{max-width:1250px;margin:auto;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 22px}
+.logo{font-size:28px;font-weight:700;letter-spacing:4px}
+.links{display:flex;gap:27px;font-size:13px;text-transform:uppercase}
+.icons{display:flex;gap:18px;font-size:21px}
+.hero{height:72vh;min-height:520px;background:linear-gradient(90deg,rgba(0,0,0,.52),rgba(0,0,0,.08)),url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:center}
+.heroText{max-width:1250px;width:100%;margin:auto;padding:30px;color:white}
+.heroText p{font-size:14px;letter-spacing:4px;margin-bottom:18px}
+.heroText h1{font-size:58px;line-height:1.05;max-width:650px;margin-bottom:25px}
+.btn{display:inline-block;background:#fff;color:#111;padding:15px 30px;font-size:13px;font-weight:bold;letter-spacing:1px}
+.section{max-width:1250px;margin:65px auto;padding:0 22px}
+.title{text-align:center;margin-bottom:35px}
+.title h2{font-size:30px;margin-bottom:9px}
+.title p{color:#777;font-size:14px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:#f6f6f6;position:relative}
+.card img{width:100%;height:390px;object-fit:cover;display:block}
+.cardInfo{background:white;padding:15px 4px}
+.cardInfo h3{font-size:14px;font-weight:500;margin-bottom:7px}
+.price{font-size:14px}
+.badge{position:absolute;top:12px;left:12px;background:white;padding:7px 10px;font-size:10px}
+.banner{background:#eee;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.banner img{width:100%;height:470px;object-fit:cover}
+.bannerText{padding:50px}
+.bannerText p{letter-spacing:3px;font-size:12px;margin-bottom:15px}
+.bannerText h2{font-size:42px;margin-bottom:20px}
+.dark{background:#161616;color:#fff;text-align:center;padding:70px 20px}
+.dark h2{font-size:34px;margin-bottom:12px}
+.dark p{color:#ccc;margin-bottom:25px}
+footer{background:#f5f5f5;padding:45px 22px}
+.footerGrid{max-width:1250px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:35px}
+footer h3{font-size:13px;margin-bottom:17px}
+footer p,footer a{display:block;color:#666;font-size:13px;margin:9px 0}
+@media(max-width:800px){
+ .links{display:none}.products{grid-template-columns:repeat(2,1fr)}
+ .card img{height:300px}.heroText h1{font-size:40px}
+ .banner{grid-template-columns:1fr}.banner img{height:350px}
+ .footerGrid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<div class="top">FREE DELIVERY ON ORDERS OVER AED 250</div>
+<header>
+<nav class="nav">
+<div class="logo">AMYAE</div>
+<div class="links">
+<a href="#">New In</a><a href="#">Women</a><a href="#">Men</a><a href="#">Collections</a><a href="#">Sale</a>
+</div>
+<div class="icons"><span>⌕</span><span>♡</span><span>🛍</span></div>
+</nav>
+</header>
+
+<section class="hero">
+<div class="heroText">
+<p>NEW SEASON 2026</p>
+<h1>Style made for every moment.</h1>
+<a class="btn" href="#shop">SHOP NOW</a>
+</div>
+</section>
+
+<section class="section" id="shop">
+<div class="title"><h2>Shop New Arrivals</h2><p>Fresh styles selected for you</p></div>
+<div class="products">
+<div class="card"><span class="badge">NEW</span><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80"><div class="cardInfo"><h3>Elegant Summer Dress</h3><div class="price">AED 189</div></div></div>
+<div class="card"><span class="badge">NEW</span><img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=700&q=80"><div class="cardInfo"><h3>Classic Linen Set</h3><div class="price">AED 229</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=700&q=80"><div class="cardInfo"><h3>Everyday Statement Look</h3><div class="price">AED 159</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=80"><div class="cardInfo"><h3>Relaxed Cotton Shirt</h3><div class="price">AED 139</div></div></div>
+</div>
+</section>
+
+<section class="section">
+<div class="banner">
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=85">
+<div class="bannerText"><p>THE NEW COLLECTION</p><h2>Effortless. Modern. Yours.</h2><p>Discover versatile pieces designed for your everyday wardrobe.</p><a class="btn" href="#shop">EXPLORE COLLECTION</a></div>
+</div>
+</section>
+
+<section class="dark">
+<h2>AMYAE ONLINE STORE</h2>
+<p>Fashion, delivered across the UAE.</p>
+<a class="btn" href="#shop">SHOP THE COLLECTION</a>
+</section>
+
+<footer>
+<div class="footerGrid">
+<div><h3>AMYAE</h3><p>A modern online fashion store bringing timeless style to your wardrobe.</p></div>
+<div><h3>SHOP</h3><a href="#">Women</a><a href="#">Men</a><a href="#">New Arrivals</a><a href="#">Sale</a></div>
+<div><h3>HELP</h3><a href="#">Contact Us</a><a href="#">Shipping</a><a href="#">Returns</a><a href="#">FAQ</a></div>
+<div><h3>FOLLOW</h3><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
+</div>
+</footer>
+</body>
+</html>
