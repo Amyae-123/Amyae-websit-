@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AMYAE | Modesty & Prayer Wear</title>
+<title>AMYAE | Premium Cotton Prayer Dress</title>
 
 <style>
 *{
@@ -15,8 +15,8 @@
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#fff;
   color:#222;
+  background:#fff;
 }
 
 a{
@@ -25,7 +25,7 @@ a{
 }
 
 .top{
-  background:#182015;
+  background:#172014;
   color:#fff;
   text-align:center;
   padding:10px;
@@ -34,32 +34,32 @@ a{
 }
 
 header{
-  background:#fff;
   border-bottom:1px solid #ddd;
+  background:#fff;
   position:sticky;
   top:0;
   z-index:20;
 }
 
 .nav{
-  max-width:1200px;
+  max-width:1250px;
   margin:auto;
-  height:75px;
+  height:72px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 25px;
+  padding:0 22px;
 }
 
 .logo{
-  font-family:Georgia,serif;
-  font-size:30px;
+  font-size:28px;
+  font-weight:bold;
   letter-spacing:4px;
 }
 
 .links{
   display:flex;
-  gap:30px;
+  gap:28px;
   font-size:13px;
   text-transform:uppercase;
 }
@@ -68,63 +68,64 @@ header{
   font-size:22px;
 }
 
+/* HERO */
+
 .hero{
   min-height:560px;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,.08)),
+    url("prayer4.jpg") center/cover;
   display:flex;
   align-items:center;
-  background:
-  linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,.1)),
-  url("images/prayer1.jpg") center/cover;
 }
 
 .heroText{
-  max-width:1200px;
+  max-width:1250px;
   width:100%;
   margin:auto;
-  padding:40px;
+  padding:40px 25px;
   color:white;
 }
 
 .heroText p{
   letter-spacing:4px;
-  font-size:13px;
-  margin-bottom:15px;
+  margin-bottom:18px;
 }
 
 .heroText h1{
-  font-family:Georgia,serif;
   font-size:55px;
   max-width:650px;
-  line-height:1.1;
+  line-height:1.05;
   margin-bottom:25px;
 }
 
 .btn{
   display:inline-block;
-  background:white;
-  color:#222;
-  padding:15px 30px;
-  font-size:13px;
+  background:#fff;
+  color:#172014;
+  padding:15px 28px;
   font-weight:bold;
+  font-size:13px;
   letter-spacing:1px;
-  border:none;
+  border:0;
   cursor:pointer;
 }
 
+/* PRODUCT */
+
 .section{
-  max-width:1200px;
-  margin:70px auto;
-  padding:0 25px;
+  max-width:1250px;
+  margin:65px auto;
+  padding:0 22px;
 }
 
 .title{
   text-align:center;
-  margin-bottom:40px;
+  margin-bottom:35px;
 }
 
 .title h2{
-  font-family:Georgia,serif;
-  font-size:34px;
+  font-size:30px;
   margin-bottom:10px;
 }
 
@@ -132,22 +133,20 @@ header{
   color:#777;
 }
 
-/* PRODUCTS */
-
 .products{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:22px;
+  gap:20px;
 }
 
 .card{
-  background:#f7f5f0;
   cursor:pointer;
-  transition:.3s;
+  background:#f5f5f5;
+  transition:.2s;
 }
 
 .card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-4px);
 }
 
 .card img{
@@ -158,8 +157,8 @@ header{
 }
 
 .cardInfo{
-  padding:18px;
   background:white;
+  padding:15px 5px;
 }
 
 .cardInfo h3{
@@ -171,47 +170,33 @@ header{
   font-weight:bold;
 }
 
-/* PRODUCT POPUP */
+/* PRODUCT PAGE */
 
-.modal{
+.productPage{
   display:none;
-  position:fixed;
-  z-index:100;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,.75);
-  overflow:auto;
-}
-
-.modalBox{
-  background:white;
-  max-width:1100px;
+  max-width:1200px;
   margin:50px auto;
-  padding:25px;
-  position:relative;
+  padding:0 25px;
 }
 
-.close{
-  position:absolute;
-  right:20px;
-  top:12px;
-  font-size:35px;
+.back{
+  display:inline-block;
+  margin-bottom:30px;
   cursor:pointer;
+  color:#555;
 }
 
-.productDetail{
+.productLayout{
   display:grid;
-  grid-template-columns:1.1fr 1fr;
-  gap:40px;
-  margin-top:25px;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
 }
 
 .mainImage{
   width:100%;
-  height:600px;
+  height:650px;
   object-fit:cover;
+  background:#f5f5f5;
 }
 
 .thumbs{
@@ -221,105 +206,99 @@ header{
 }
 
 .thumbs img{
-  width:85px;
-  height:100px;
+  width:90px;
+  height:110px;
   object-fit:cover;
   cursor:pointer;
   border:2px solid transparent;
 }
 
 .thumbs img:hover{
-  border-color:#182015;
+  border-color:#172014;
 }
 
-.detailInfo{
-  padding:30px 10px;
-}
-
-.detailInfo h2{
-  font-family:Georgia,serif;
-  font-size:34px;
+.productInfo h1{
+  font-size:36px;
   margin-bottom:15px;
 }
 
-.detailPrice{
-  font-size:22px;
+.productPrice{
+  font-size:24px;
   font-weight:bold;
   margin:20px 0;
 }
 
 .description{
-  color:#666;
-  line-height:1.8;
+  color:#555;
+  line-height:1.7;
   margin-bottom:25px;
 }
 
 .features{
-  margin:20px 0;
+  background:#f7f5ef;
+  padding:20px;
+  margin-bottom:25px;
   line-height:2;
 }
 
-.add{
-  background:#182015;
-  color:white;
+.option{
+  margin:20px 0;
+}
+
+select,
+input{
+  padding:12px;
+  margin-top:8px;
+  width:150px;
+  border:1px solid #ccc;
+}
+
+.buy{
+  display:block;
   width:100%;
+  background:#172014;
+  color:white;
   padding:17px;
-  border:none;
+  border:0;
   font-weight:bold;
   cursor:pointer;
-  font-size:14px;
+  margin-top:15px;
 }
 
-/* BANNER */
-
-.banner{
-  background:#f3eee6;
-  padding:60px;
-  text-align:center;
-}
-
-.banner h2{
-  font-family:Georgia,serif;
-  font-size:40px;
-  margin-bottom:15px;
-}
-
-.banner p{
-  color:#666;
-  margin-bottom:25px;
+.cart{
+  display:block;
+  width:100%;
+  background:#fff;
+  color:#172014;
+  padding:17px;
+  border:1px solid #172014;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:10px;
 }
 
 /* FOOTER */
 
-footer{
-  background:#182015;
+.dark{
+  background:#172014;
   color:white;
-  padding:50px 25px;
+  text-align:center;
+  padding:70px 20px;
+  margin-top:70px;
 }
 
-.footerGrid{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:35px;
-}
-
-footer h3{
+.dark h2{
   margin-bottom:15px;
 }
 
-footer p,
-footer a{
-  display:block;
-  color:#ccc;
-  margin:9px 0;
-  font-size:14px;
+.dark p{
+  color:#ddd;
+  margin-bottom:25px;
 }
 
 /* MOBILE */
 
-@media(max-width:800px){
+@media(max-width:850px){
 
   .links{
     display:none;
@@ -337,16 +316,12 @@ footer a{
     font-size:40px;
   }
 
-  .productDetail{
+  .productLayout{
     grid-template-columns:1fr;
   }
 
   .mainImage{
     height:500px;
-  }
-
-  .footerGrid{
-    grid-template-columns:1fr 1fr;
   }
 }
 
@@ -356,16 +331,16 @@ footer a{
     grid-template-columns:1fr;
   }
 
-  .hero{
-    min-height:500px;
-  }
-
-  .modalBox{
-    margin:10px;
+  .card img{
+    height:430px;
   }
 
   .mainImage{
-    height:400px;
+    height:500px;
+  }
+
+  .productInfo h1{
+    font-size:28px;
   }
 }
 </style>
@@ -380,20 +355,16 @@ FREE DELIVERY ON ORDERS OVER AED 250
 <header>
 <nav class="nav">
 
-<div class="logo">
-AMYAE
-</div>
+<div class="logo">AMYAE</div>
 
 <div class="links">
-<a href="#shop">New In</a>
-<a href="#shop">Prayer Wear</a>
-<a href="#shop">Women</a>
-<a href="#shop">Collections</a>
+<a href="#">New In</a>
+<a href="#">Women</a>
+<a href="#">Prayer Collection</a>
+<a href="#">Collections</a>
 </div>
 
-<div class="icons">
-♡ 🛍
-</div>
+<div class="icons">♡ 🛍</div>
 
 </nav>
 </header>
@@ -405,320 +376,225 @@ AMYAE
 
 <div class="heroText">
 
-<p>AMYAE MODEST COLLECTION</p>
+<p>AMYAE PRAYER COLLECTION</p>
 
-<h1>
-Modesty in every prayer.
-</h1>
+<h1>Modesty in every prayer.</h1>
 
-<a class="btn" href="#shop">
-SHOP NOW
-</a>
+<a class="btn" href="#shop">SHOP NOW</a>
 
 </div>
 
 </section>
 
 
-<!-- PRODUCTS -->
+<!-- PRODUCT LIST -->
 
 <section class="section" id="shop">
 
 <div class="title">
 
-<h2>
-Featured Collection
-</h2>
+<h2>Premium Prayer Collection</h2>
 
-<p>
-Premium modest wear designed for comfort and elegance.
-</p>
+<p>Comfortable modesty designed for peaceful moments.</p>
 
 </div>
 
 
 <div class="products">
 
-
-<!-- PRODUCT -->
-
 <div class="card" onclick="openProduct()">
 
-<img src="images/prayer1.jpg" alt="AMYAE Prayer Dress">
+<img src="prayer1.jpg">
 
 <div class="cardInfo">
 
-<h3>
-Premium Cotton Prayer Dress
-</h3>
+<h3>Premium Cotton Prayer Dress</h3>
 
-<div class="price">
-AED 149
-</div>
+<div class="price">AED 89</div>
 
 </div>
 
 </div>
-
-
-<!-- MORE PRODUCT CARDS CAN BE ADDED HERE -->
-
-<div class="card">
-
-<img src="images/prayer2.jpg" alt="AMYAE Prayer Dress">
-
-<div class="cardInfo">
-
-<h3>
-AMYAE Modest Prayer Collection
-</h3>
-
-<div class="price">
-AED 149
-</div>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<img src="images/prayer3.jpg" alt="AMYAE Prayer Dress">
-
-<div class="cardInfo">
-
-<h3>
-Elegant White Prayer Dress
-</h3>
-
-<div class="price">
-AED 149
-</div>
-
-</div>
-
-</div>
-
 
 </div>
 
 </section>
 
 
-<!-- COLLECTION BANNER -->
+<!-- PRODUCT DETAIL -->
 
-<section class="section">
+<section class="productPage" id="productPage">
 
-<div class="banner">
-
-<h2>
-Made for your peaceful moments.
-</h2>
-
-<p>
-Soft. Breathable. Comfortable. Designed for your prayer.
-</p>
-
-<a class="btn" href="#shop">
-EXPLORE COLLECTION
-</a>
-
+<div class="back" onclick="closeProduct()">
+← Back to products
 </div>
 
-</section>
+
+<div class="productLayout">
 
 
-<!-- PRODUCT DETAIL POPUP -->
-
-<div class="modal" id="productModal">
-
-<div class="modalBox">
-
-<span class="close" onclick="closeProduct()">
-×
-</span>
-
-
-<div class="productDetail">
-
+<!-- PHOTOS -->
 
 <div>
 
-<img
-id="mainProductImage"
-class="mainImage"
-src="images/prayer1.jpg"
-alt="Prayer Dress"
->
-
+<img id="mainImage" class="mainImage" src="prayer1.jpg">
 
 <div class="thumbs">
 
-<img
-src="images/prayer1.jpg"
-onclick="changeImage(this.src)"
->
+<img src="prayer1.jpg" onclick="changeImage('prayer1.jpg')">
 
-<img
-src="images/prayer2.jpg"
-onclick="changeImage(this.src)"
->
+<img src="prayer2.jpg" onclick="changeImage('prayer2.jpg')">
 
-<img
-src="images/prayer3.jpg"
-onclick="changeImage(this.src)"
->
+<img src="prayer3.jpg" onclick="changeImage('prayer3.jpg')">
+
+<img src="prayer4.jpg" onclick="changeImage('prayer4.jpg')">
 
 </div>
 
 </div>
 
 
-<div class="detailInfo">
+<!-- DETAILS -->
 
-<h2>
-Premium Cotton Prayer Dress
-</h2>
+<div class="productInfo">
 
-<div class="detailPrice">
-AED 149
+<h1>Premium Cotton Prayer Dress</h1>
+
+<div class="productPrice">
+AED 89
 </div>
 
 <p class="description">
 
-Experience comfort and elegance with the AMYAE Premium Cotton Prayer Dress.
+A beautiful one-piece Islamic prayer dress designed for comfort,
+modesty and peaceful moments of prayer.
 
-Made from soft, breathable cotton, this one-piece prayer dress provides comfortable full coverage while allowing you to move freely during prayer.
+Made with soft and breathable cotton fabric, this lightweight prayer
+dress provides full coverage while remaining comfortable to wear.
 
-Its lightweight fabric makes it comfortable for everyday use and easy to store or travel with.
+Perfect for daily salah, Ramadan, travel, home prayer and gifting.
 
 </p>
 
 
 <div class="features">
 
-✓ 100% Cotton<br>
-✓ Soft & Breathable Fabric<br>
-✓ Lightweight & Comfortable<br>
-✓ Full Coverage<br>
-✓ One-Piece Design<br>
-✓ Suitable for Daily Prayer
+<strong>PRODUCT DETAILS</strong><br>
+
+✓ Premium cotton fabric<br>
+
+✓ Soft & breathable<br>
+
+✓ Lightweight and comfortable<br>
+
+✓ Full modest coverage<br>
+
+✓ One-piece prayer dress<br>
+
+✓ Suitable for daily prayer<br>
+
+✓ Elegant white finish
 
 </div>
 
 
-<button class="add" onclick="addToCart()">
+<div class="option">
+
+<label><strong>Size</strong></label><br>
+
+<select>
+
+<option>Free Size</option>
+<option>Small</option>
+<option>Medium</option>
+<option>Large</option>
+
+</select>
+
+</div>
+
+
+<div class="option">
+
+<label><strong>Quantity</strong></label><br>
+
+<input type="number" value="1" min="1">
+
+</div>
+
+
+<button class="buy" onclick="buyNow()">
+BUY NOW
+</button>
+
+<button class="cart" onclick="addCart()">
 ADD TO CART
 </button>
 
-</div>
 
 </div>
 
 </div>
 
-</div>
+</section>
 
 
-<!-- FOOTER -->
+<section class="dark">
 
-<footer>
+<h2>AMYAE</h2>
 
-<div class="footerGrid">
+<p>Made for your modesty. Designed for your comfort.</p>
 
-<div>
+<a class="btn" href="#shop">SHOP COLLECTION</a>
 
-<h3>
-AMYAE
-</h3>
-
-<p>
-Modesty in every prayer. Premium modest clothing designed for comfort and elegance.
-</p>
-
-</div>
-
-
-<div>
-
-<h3>
-SHOP
-</h3>
-
-<a href="#shop">Prayer Wear</a>
-<a href="#shop">Women</a>
-<a href="#shop">New Arrivals</a>
-
-</div>
-
-
-<div>
-
-<h3>
-HELP
-</h3>
-
-<a href="#">Contact Us</a>
-<a href="#">Shipping</a>
-<a href="#">Returns</a>
-<a href="#">FAQ</a>
-
-</div>
-
-
-<div>
-
-<h3>
-FOLLOW
-</h3>
-
-<a href="#">Instagram</a>
-<a href="#">Facebook</a>
-<a href="#">TikTok</a>
-
-</div>
-
-</div>
-
-</footer>
+</section>
 
 
 <script>
 
 function openProduct(){
 
-document.getElementById("productModal").style.display="block";
+document.getElementById("shop").style.display="none";
+
+document.querySelector(".hero").style.display="none";
+
+document.getElementById("productPage").style.display="block";
+
+window.scrollTo(0,0);
 
 }
+
 
 function closeProduct(){
 
-document.getElementById("productModal").style.display="none";
+document.getElementById("productPage").style.display="none";
+
+document.getElementById("shop").style.display="block";
+
+document.querySelector(".hero").style.display="flex";
+
+window.scrollTo(0,0);
 
 }
+
 
 function changeImage(image){
 
-document.getElementById("mainProductImage").src=image;
+document.getElementById("mainImage").src=image;
 
 }
 
-function addToCart(){
 
-alert("Product added to cart!");
+function addCart(){
 
-}
-
-window.onclick=function(event){
-
-let modal=document.getElementById("productModal");
-
-if(event.target==modal){
-
-modal.style.display="none";
+alert("Premium Cotton Prayer Dress added to cart!");
 
 }
+
+
+function buyNow(){
+
+alert("Thank you! Your order process will be connected to your checkout later.");
 
 }
 
