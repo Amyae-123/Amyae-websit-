@@ -70,12 +70,13 @@ header{
 /* HERO */
 
 .hero{
-  min-height:680px;
+  min-height:720px;
   background-image:
     linear-gradient(
       90deg,
-      rgba(0,0,0,0.45),
-      rgba(0,0,0,0.10)
+      rgba(0,0,0,0.58) 0%,
+      rgba(0,0,0,0.28) 45%,
+      rgba(0,0,0,0.05) 100%
     ),
     url("AMYAE-hero-banner.png");
   background-position:center;
@@ -87,43 +88,55 @@ header{
 }
 
 .heroText{
-  max-width:1250px;
   width:100%;
-  margin:auto;
-  padding:60px 25px;
-  color:white;
+  max-width:1250px;
+  margin:0 auto;
+  padding:60px 40px;
+  color:#fff;
   position:relative;
   z-index:2;
 }
 
-.heroText p{
+.heroText .eyebrow{
+  font-size:12px;
   letter-spacing:4px;
-  margin-bottom:18px;
+  margin-bottom:20px;
+  font-weight:500;
 }
 
 .heroText h1{
-  font-size:55px;
-  max-width:650px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:64px;
+  font-weight:400;
   line-height:1.05;
-  margin-bottom:25px;
+  max-width:600px;
+  margin-bottom:20px;
 }
 
-.coverSubtitle{
-  letter-spacing:1px !important;
+.heroText .coverSubtitle{
   font-size:16px;
-  margin-bottom:25px !important;
+  letter-spacing:.5px;
+  line-height:1.6;
+  max-width:430px;
+  margin-bottom:32px;
 }
 
-.btn{
+.heroText .btn{
   display:inline-block;
   background:#fff;
   color:#172014;
-  padding:15px 28px;
+  padding:16px 32px;
+  font-size:12px;
   font-weight:bold;
-  font-size:13px;
-  letter-spacing:1px;
-  border:0;
+  letter-spacing:2px;
+  border:none;
   cursor:pointer;
+  transition:.2s;
+}
+
+.heroText .btn:hover{
+  background:#172014;
+  color:#fff;
 }
 /* PRODUCT */
 
@@ -390,15 +403,17 @@ FREE DELIVERY ON ORDERS OVER AED 250
 
   <div class="heroText">
 
-    <p>AMYAE | MODEST FASHION</p>
+    <p class="eyebrow">AMYAE COLLECTION</p>
 
     <h1>Modesty in every moment.</h1>
 
     <p class="coverSubtitle">
-      Elegant modest wear designed for your everyday life.
+      Elegant pieces designed for comfort, confidence and everyday beauty.
     </p>
 
-    <a class="btn" href="#shop">SHOP THE COLLECTION</a>
+    <a class="btn" href="#shop">
+      SHOP THE COLLECTION
+    </a>
 
   </div>
 
